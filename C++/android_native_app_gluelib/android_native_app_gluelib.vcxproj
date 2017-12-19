@@ -53,18 +53,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <TargetName>libnativeappglue</TargetName>
-    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\cpufeatureslib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath);C:\Users\moose-home\workspace\NDKMoreTeapots\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\cpufeatureslib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\ndkhelperlib</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>libnativeappglue</TargetName>
-    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\cpufeatureslib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath);C:\Users\moose-home\workspace\NDKMoreTeapots\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\cpufeatureslib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\ndkhelperlib</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <TargetName>libnativeappglue</TargetName>
-    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\cpufeatureslib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath);C:\Users\moose-home\workspace\NDKMoreTeapots\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\cpufeatureslib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\ndkhelperlib</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\cpufeatureslib;C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\moose-home\workspace\MoreTeaPots Android Application Sample\C++\ndkhelperlib;$(IncludePath);C:\Users\moose-home\workspace\NDKMoreTeapots\C++\android_native_app_gluelib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\cpufeatureslib;C:\Users\moose-home\workspace\NDKMoreTeapots\C++\ndkhelperlib</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
