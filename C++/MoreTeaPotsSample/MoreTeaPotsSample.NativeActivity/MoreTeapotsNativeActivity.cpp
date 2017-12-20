@@ -70,7 +70,8 @@ class Engine
     ASensorEventQueue* sensor_event_queue_;
 
     void UpdateFPS( float fps );
-    void ShowUI();
+	void UpdateNumObjs(int numObjs);
+	void ShowUI();
     void TransformPosition( ndk_helper::Vec2& vec );
 
 public:
@@ -187,7 +188,11 @@ void Engine::DrawFrame()
     {
         UpdateFPS( fps );
     }
-    double dTime = monitor_.GetCurrentTime();
+
+	// TODO - only need to call this when the number changes
+	UpdateNumObjs(NUM_TEAPOTS_X*NUM_TEAPOTS_Y*NUM_TEAPOTS_Z);
+
+	double dTime = monitor_.GetCurrentTime();
     renderer_.Update( dTime );
 
     // Just fill the screen with a color.
@@ -432,6 +437,20 @@ void Engine::UpdateFPS( float fps )
 
     app_->activity->vm->DetachCurrentThread();
     return;
+}
+
+void Engine::UpdateNumObjs(int numObjs)
+{
+	JNIEnv *jni;
+	app_->activity->vm->AttachCurrentThread(&jni, NULL);
+
+	//Default class retrieval
+	jclass clazz = jni->GetObjectClass(app_->activity->clazz);
+	jmethodID methodID = jni->GetMethodID(clazz, "updateNumObjs", "(I)V");
+	jni->CallVoidMethod(app_->activity->clazz, methodID, numObjs);
+
+	app_->activity->vm->DetachCurrentThread();
+	return;
 }
 
 Engine g_engine;

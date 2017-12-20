@@ -93,7 +93,8 @@ public class MoreTeapotsNativeActivity extends NativeActivity {
 
     MoreTeapotsNativeActivity _activity;
     PopupWindow _popupWindow;
-    TextView _label;
+    TextView _labelFPS;
+    TextView _labelNumObjs;
 
     public void showUI()
     {
@@ -123,21 +124,35 @@ public class MoreTeapotsNativeActivity extends NativeActivity {
                 _popupWindow.showAtLocation(mainLayout, Gravity.TOP | Gravity.LEFT, 10, 10);
                 _popupWindow.update();
 
-                _label = (TextView)popupView.findViewById(R.id.textViewFPS);
+                _labelFPS = (TextView)popupView.findViewById(R.id.textViewFPS);
+                _labelNumObjs = (TextView)popupView.findViewById(R.id.textViewNumObjs);
 
             }});
     }
 
     public void updateFPS(final float fFPS)
     {
-        if( _label == null )
+        if( _labelFPS == null)
             return;
 
         _activity = this;
         this.runOnUiThread(new Runnable()  {
             @Override
             public void run()  {
-                _label.setText(String.format("%2.2f FPS", fFPS));
+                _labelFPS.setText(String.format("%2.2f FPS", fFPS));
+            }});
+    }
+
+    public void updateNumObjs(final int numObjs)
+    {
+        if(_labelNumObjs == null)
+            return;
+
+        _activity = this;
+        this.runOnUiThread(new Runnable()  {
+            @Override
+            public void run()  {
+                _labelNumObjs.setText(String.format("%04d Objs", numObjs));
             }});
     }
 }
